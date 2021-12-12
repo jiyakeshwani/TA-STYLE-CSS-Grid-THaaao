@@ -1,0 +1,105 @@
+@import "reset";
+@import "variables";
+@import "general";
+
+.navbar {
+  background-color: white;
+  padding: 0.5rem 3rem;
+  border-top: 4px solid $primary;
+  border-radius: 4px;
+  a {
+    color: $primary;
+    font-size: 1.2rem;
+    font-weight: 600;
+  }
+}
+.card {
+  background-color: white;
+  border-top: 4px solid $primary;
+  border-radius: 4px;
+  padding: 1rem;
+  position: relative;
+  p {
+    color: $tertiary;
+  }
+  a {
+    color: $secondary;
+    position: absolute;
+    bottom: 0.3rem;
+    width: 100%;
+  }
+}
+%img {
+  object-fit: cover;
+  margin: 2rem auto;
+}
+.container {
+  display: grid;
+  gap: 1rem;
+  grid-template-columns: 1fr 1fr 1fr;
+  grid-template-areas:
+    "header header header"
+    "sidebar-l1 main sidebar-r1"
+    "sidebar-l2 main sidebar-r2"
+    "sidebar-l2 main sidebar-r3";
+}
+
+.header {
+  grid-area: header;
+}
+.sidebar-l1 {
+  grid-area: sidebar-l1;
+}
+.sidebar-l2 {
+  grid-area: sidebar-l2;
+  img {
+    @extend %img;
+    width: 200px;
+    height: 100px;
+  }
+}
+.main {
+  grid-area: main;
+  img {
+    @extend %img;
+    width: 300px;
+    height: 300px;
+
+    border-radius: 50%;
+  }
+  p {
+    padding-bottom: 2rem;
+  }
+}
+.sidebar-r1 {
+  grid-area: sidebar-r1;
+  a {
+    background-color: $secondary;
+    color: white;
+    left: 0;
+    bottom: 0;
+    padding: 0.5rem;
+  }
+  p {
+    padding-top: 0.5rem;
+    padding-bottom: 2rem;
+  }
+}
+.sidebar-r2 {
+  grid-area: sidebar-r2;
+  h2 {
+    background-color: $primary;
+    color: white;
+    position: absolute;
+    top: 0;
+    width: 100%;
+    left: 0;
+    padding: 0.5rem;
+  }
+  p {
+    padding-top: 3rem;
+  }
+}
+.sidebar-r3 {
+  grid-area: sidebar-r3;
+}

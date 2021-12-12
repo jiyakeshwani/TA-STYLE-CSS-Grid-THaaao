@@ -1,0 +1,46 @@
+*,
+*::after,
+*::before {
+  box-sizing: border-box;
+}
+html {
+  font-size: 16px;
+}
+body {
+  font-family: $font;
+  line-height: 1.5;
+  background-color: $bg;
+}
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+.flex {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+.flex-30 {
+  flex: 0 1 30%;
+}
+a {
+  text-decoration: none;
+  display: block;
+}
+h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+}
+h2 {
+  font-size: 1.5rem;
+  color: $tertiary;
+  font-weight: 600;
+}
+.center {
+  text-align: center;
+}
+img {
+  display: block;
+}
