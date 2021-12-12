@@ -1,0 +1,331 @@
+html,
+body,
+div,
+span,
+applet,
+object,
+iframe,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p,
+blockquote,
+pre,
+a,
+abbr,
+acronym,
+address,
+big,
+cite,
+code,
+del,
+dfn,
+em,
+img,
+ins,
+kbd,
+q,
+s,
+samp,
+small,
+strike,
+strong,
+sub,
+sup,
+tt,
+var,
+b,
+u,
+i,
+center,
+dl,
+dt,
+dd,
+ol,
+ul,
+li,
+fieldset,
+form,
+label,
+legend,
+table,
+caption,
+tbody,
+tfoot,
+thead,
+tr,
+th,
+td,
+article,
+aside,
+canvas,
+details,
+embed,
+figure,
+figcaption,
+footer,
+header,
+hgroup,
+menu,
+nav,
+output,
+ruby,
+section,
+summary,
+time,
+mark,
+audio,
+video {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
+/* HTML5 display-role reset for older browsers */
+article,
+aside,
+details,
+figcaption,
+figure,
+footer,
+header,
+hgroup,
+menu,
+nav,
+section {
+  display: block;
+}
+
+body {
+  line-height: 1;
+}
+
+ol,
+ul {
+  list-style: none;
+}
+
+blockquote,
+q {
+  quotes: none;
+}
+
+blockquote:before,
+blockquote:after,
+q:before,
+q:after {
+  content: "";
+  content: none;
+}
+
+table {
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+*,
+*::after,
+*::before {
+  -webkit-box-sizing: border-box;
+          box-sizing: border-box;
+}
+
+html {
+  font-size: 16px;
+}
+
+body {
+  font-family: "Inter", sans-serif;
+  line-height: 1.5;
+  background-color: #394a4e;
+}
+
+.container {
+  max-width: 1200px;
+  margin: 0 auto;
+  padding: 0 2rem;
+}
+
+.flex {
+  display: -webkit-box;
+  display: -ms-flexbox;
+  display: flex;
+  -webkit-box-pack: justify;
+      -ms-flex-pack: justify;
+          justify-content: space-between;
+  -webkit-box-align: center;
+      -ms-flex-align: center;
+          align-items: center;
+}
+
+.flex-30 {
+  -webkit-box-flex: 0;
+      -ms-flex: 0 1 30%;
+          flex: 0 1 30%;
+}
+
+a {
+  text-decoration: none;
+  display: block;
+}
+
+h1 {
+  font-size: 3rem;
+  color: white;
+  font-weight: 800;
+}
+
+h2 {
+  font-size: 1.5rem;
+  color: #4f4c4e;
+  font-weight: 600;
+}
+
+.center {
+  text-align: center;
+}
+
+img {
+  display: block;
+}
+
+.navbar {
+  background-color: white;
+  padding: 0.5rem 3rem;
+  border-top: 4px solid #0095be;
+  border-radius: 4px;
+}
+
+.navbar a {
+  color: #0095be;
+  font-size: 1.2rem;
+  font-weight: 600;
+}
+
+.card {
+  background-color: white;
+  border-top: 4px solid #0095be;
+  border-radius: 4px;
+  padding: 1rem;
+  position: relative;
+}
+
+.card p {
+  color: #4f4c4e;
+}
+
+.card a {
+  color: #fc2e1a;
+  position: absolute;
+  bottom: 0.3rem;
+  width: 100%;
+}
+
+.sidebar-l2 img, .main img {
+  -o-object-fit: cover;
+     object-fit: cover;
+  margin: 2rem auto;
+}
+
+.container {
+  display: -ms-grid;
+  display: grid;
+  gap: 1rem;
+  -ms-grid-columns: 1fr 1fr 1fr;
+      grid-template-columns: 1fr 1fr 1fr;
+      grid-template-areas: "header header header" "sidebar-l1 main sidebar-r1" "sidebar-l2 main sidebar-r2" "sidebar-l2 main sidebar-r3";
+}
+
+.header {
+  -ms-grid-row: 1;
+  -ms-grid-column: 1;
+  -ms-grid-column-span: 3;
+  grid-area: header;
+}
+
+.sidebar-l1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar-l1;
+}
+
+.sidebar-l2 {
+  -ms-grid-row: 3;
+  -ms-grid-row-span: 2;
+  -ms-grid-column: 1;
+  grid-area: sidebar-l2;
+}
+
+.sidebar-l2 img {
+  width: 200px;
+  height: 100px;
+}
+
+.main {
+  -ms-grid-row: 2;
+  -ms-grid-row-span: 3;
+  -ms-grid-column: 2;
+  grid-area: main;
+}
+
+.main img {
+  width: 300px;
+  height: 300px;
+  border-radius: 50%;
+}
+
+.main p {
+  padding-bottom: 2rem;
+}
+
+.sidebar-r1 {
+  -ms-grid-row: 2;
+  -ms-grid-column: 3;
+  grid-area: sidebar-r1;
+}
+
+.sidebar-r1 a {
+  background-color: #fc2e1a;
+  color: white;
+  left: 0;
+  bottom: 0;
+  padding: 0.5rem;
+}
+
+.sidebar-r1 p {
+  padding-top: 0.5rem;
+  padding-bottom: 2rem;
+}
+
+.sidebar-r2 {
+  -ms-grid-row: 3;
+  -ms-grid-column: 3;
+  grid-area: sidebar-r2;
+}
+
+.sidebar-r2 h2 {
+  background-color: #0095be;
+  color: white;
+  position: absolute;
+  top: 0;
+  width: 100%;
+  left: 0;
+  padding: 0.5rem;
+}
+
+.sidebar-r2 p {
+  padding-top: 3rem;
+}
+
+.sidebar-r3 {
+  -ms-grid-row: 4;
+  -ms-grid-column: 3;
+  grid-area: sidebar-r3;
+}
+/*# sourceMappingURL=style.css.map */
